@@ -5,13 +5,16 @@
 	<name>EI-SDK</name>
 	<license>LICENSE-apache-2.0.txt</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.66.21/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.66.31/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
-		<release version="1.66.21" tag="v1.66.21" date="2025-01-19" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.66.21/EdgeImpulse.EI-SDK.1.66.21.pack">
+		<release version="1.66.31" tag="v1.66.31" date="2025-02-04" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.66.31/EdgeImpulse.EI-SDK.1.66.31.pack">
       		EI-SDK
     	</release>	
+		<release version="1.66.21" tag="v1.66.21" date="2025-01-19" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.66.21/EdgeImpulse.EI-SDK.1.66.21.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.66.14" tag="v1.66.14" date="2025-01-13" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.66.14/EdgeImpulse.EI-SDK.1.66.14.pack">
       		EI-SDK
     	</release>
@@ -99,9 +102,6 @@
 		<release version="1.53.7" tag="v1.53.7" date="2024-07-05" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.53.7/EdgeImpulse.EI-SDK.1.53.7.pack">
       		EI-SDK
     	</release>
-		<release version="1.53.5" tag="v1.53.5" date="2024-07-03" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.53.5/EdgeImpulse.EI-SDK.1.53.5.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -146,7 +146,7 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.66.21">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.66.31">
 			<description>Edge Impulse SDK</description>	
 				<!-- short component description -->
 				<files>
@@ -433,6 +433,7 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_struct.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_stl_emulation.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer_ref.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/incbin/incbin.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_config.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_types.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_api.h"/>

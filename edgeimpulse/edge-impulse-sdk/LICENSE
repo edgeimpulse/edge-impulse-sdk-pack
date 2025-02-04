@@ -10,4 +10,5 @@ Folders containing third party code and libraries are listed below. Each folder 
 * third_party/arc_mli_package - BSD-3-Clause
 * third_party/flatbuffers - Apache 2.0
 * third_party/gemmlowp - Apache 2.0
+* third_party/incbin - Public domain
 * third_party/ruy - Apache 2.0

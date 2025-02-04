@@ -33,6 +33,9 @@
 #include "edge-impulse-sdk/classifier/ei_fill_result_struct.h"
 #include "edge-impulse-sdk/classifier/ei_model_types.h"
 #include "edge-impulse-sdk/classifier/inferencing_engines/tflite_helper.h"
+#ifdef EI_CLASSIFIER_USE_QNN_DELEGATES
+#include "QNN/TFLiteDelegate/QnnTFLiteDelegate.h"
+#endif
 
 typedef struct {
     std::unique_ptr<tflite::FlatBufferModel> model;
@@ -69,6 +72,21 @@ static EI_IMPULSE_ERROR get_interpreter(ei_learning_block_config_tflite_graph_t 
             ei_printf("Failed to construct interpreter\n");
             return EI_IMPULSE_TFLITE_ERROR;
         }
+#ifdef EI_CLASSIFIER_USE_QNN_DELEGATES
+        // Create QNN Delegate options structure.
+        TfLiteQnnDelegateOptions options = TfLiteQnnDelegateOptionsDefault();
+
+        // Set the mandatory backend_type option. All other options have default values.
+        options.backend_type = kHtpBackend;
+
+        // Instantiate delegate. Must not be freed until interpreter is freed.
+        TfLiteDelegate* delegate = TfLiteQnnDelegateCreate(&options);
+
+        if (new_state->interpreter->ModifyGraphWithDelegate(delegate) != kTfLiteOk) {
+            ei_printf("ERROR: ModifyGraphWithDelegate failed\n");
+            return EI_IMPULSE_TFLITE_ERROR;
+        }
+#endif
 
         if (new_state->interpreter->AllocateTensors() != kTfLiteOk) {
             ei_printf("AllocateTensors failed\n");
