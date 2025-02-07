@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 EdgeImpulse Inc.
+ * Copyright (c) 2024 EdgeImpulse Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include "../ei_classifier_porting.h"
-#if EI_PORTING_STM32_CUBEAI == 1
+#include "edge-impulse-sdk/porting/ei_classifier_porting.h"
+#if (EI_PORTING_OPEN_CMSIS == 1)
 
 #include "edge-impulse-sdk/tensorflow/lite/micro/debug_log.h"
 #include <stdio.h>
@@ -30,4 +30,4 @@ void DebugLog(const char* s) {
     ei_printf("%s", s);
 }
 
-#endif // EI_PORTING_STM32_CUBEAI == 1
+#endif // EI_PORTING_OPEN_CMSIS == 1
