@@ -1,18 +1,35 @@
-/*
- * Copyright (c) 2024 EdgeImpulse Inc.
+/* The Clear BSD License
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0
+ * Copyright (c) 2025 EdgeImpulse Inc.
+ * All rights reserved.
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an "AS
- * IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- * express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted (subject to the limitations in the disclaimer
+ * below) provided that the following conditions are met:
  *
- * SPDX-License-Identifier: Apache-2.0
+ *   * Redistributions of source code must retain the above copyright notice,
+ *   this list of conditions and the following disclaimer.
+ *
+ *   * Redistributions in binary form must reproduce the above copyright
+ *   notice, this list of conditions and the following disclaimer in the
+ *   documentation and/or other materials provided with the distribution.
+ *
+ *   * Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY
+ * THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+ * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+ * IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
  */
 
  #ifndef _EI_CLASSIFIER_INFERENCING_ENGINE_ATON_H
@@ -66,18 +83,17 @@ EI_IMPULSE_ERROR run_nn_inference_image_quantized(
         nn_in_info = LL_ATON_Input_Buffers_Info_Default();
         nn_out_info = LL_ATON_Output_Buffers_Info_Default();
 
-        nn_in = (uint8_t *) nn_in_info[0].addr_start.p;
+        nn_in = (uint8_t *) LL_Buffer_addr_start(&nn_in_info[0]);
         uint32_t nn_in_len = LL_Buffer_len(&nn_in_info[0]);
-        nn_out = (uint8_t *) nn_out_info[0].addr_start.p;
 
 
         #if DATA_OUT_FORMAT_FLOAT32
-        nn_out = (float32_t *) nn_out_info[0].addr_start.p;
+        nn_out = (float32_t *) nn_out_info[0].addr_base.p;
         #else
-        nn_out = (uint8_t *) nn_out_info[0].addr_start.p;
+        nn_out = (uint8_t *) LL_Buffer_addr_start(&nn_out_info[0]);
         #endif
         nn_out_len = LL_Buffer_len(&nn_out_info[0]);
-
+        
         first_run = false;
     }
 
@@ -88,8 +104,13 @@ EI_IMPULSE_ERROR run_nn_inference_image_quantized(
 
     LL_ATON_RT_Main(&NN_Instance_Default);
 
+    /* Discard all nn_out regions to avoid Dcache evictions during nn inference */
     #ifdef USE_DCACHE
-    SCB_CleanInvalidateDCache_by_Addr(nn_out, nn_out_len);
+    int i = 0;
+    while (nn_out_info[i].name != NULL) {
+            SCB_InvalidateDCache_by_Addr((float32_t *) LL_Buffer_addr_start(&nn_out_info[i]), LL_Buffer_len(&nn_out_info[i]));
+            i++;
+    }
     #endif
 
     ei_learning_block_config_tflite_graph_t *block_config = (ei_learning_block_config_tflite_graph_t *)impulse->learning_blocks[0].config;
@@ -112,6 +133,25 @@ EI_IMPULSE_ERROR run_nn_inference_image_quantized(
                     block_config,
                     result,
                     6, // hard coded for now
+                    (uint8_t *)nn_out,
+                    nn_out_info[0].offset[0],
+                    nn_out_info[0].scale[0],
+                    nn_out_len);
+                #endif
+                break;
+
+            case EI_CLASSIFIER_LAST_LAYER_YOLO_PRO:
+                #if MODEL_OUTPUT_IS_FLOAT
+                fill_res = fill_result_struct_f32_yolo_pro(
+                    ei_default_impulse.impulse,
+                    &result,
+                    (float *)&data,
+                    ei_default_impulse.impulse->tflite_output_features_count);
+                #else
+                fill_res = fill_result_struct_quantized_yolo_pro(
+                    impulse,
+                    block_config,
+                    result,
                     (uint8_t *)nn_out,
                     nn_out_info[0].offset[0],
                     nn_out_info[0].scale[0],
