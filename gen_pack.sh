@@ -36,7 +36,7 @@ PACK_DIRS="
 # Default: empty
 #
 PACK_BASE_FILES="
-  LICENSE-apache-2.0.txt
+  LICENSE.3-clause-bsd-clear
 "
 
 # Specify file names to be deleted from pack build directory
