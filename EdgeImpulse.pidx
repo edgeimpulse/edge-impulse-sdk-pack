@@ -2,8 +2,8 @@
 <index schemaVersion="1.0.0" xs:noNamespaceSchemaLocation="PackIndex.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
   <vendor>EdgeImpulse</vendor>
   <url>https://raw.githubusercontent.com/edgeimpulse/edge-impulse-sdk-pack/main/</url>
-  <timestamp>2024-12-09 10:39:46</timestamp>
+  <timestamp>2025-05-22 18:28:15</timestamp>
   <pindex>
-    <pdsc url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.61.37/" vendor="EdgeImpulse" name="EI-SDK" version="1.61.37"/>
+    <pdsc url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.47/" vendor="EdgeImpulse" name="EI-SDK" version="1.71.47"/>
   </pindex>
 </index>

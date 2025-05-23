@@ -3,15 +3,18 @@
 <package schemaVersion="1.7.7" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.7/schema/PACK.xsd">
 	<vendor>EdgeImpulse</vendor>
 	<name>EI-SDK</name>
-	<license>LICENSE-apache-2.0.txt</license>
+	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.61.37/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.47/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
+		<release version="1.71.47" tag="v1.71.47" date="2025-05-22" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.47/EdgeImpulse.EI-SDK.1.71.47.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.61.37" tag="v1.61.37" date="2024-12-09" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.61.37/EdgeImpulse.EI-SDK.1.61.37.pack">
       		EI-SDK
-    	</release>	
+    	</release>
 		<release version="1.61.36" tag="v1.61.36" date="2024-12-08" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.61.36/EdgeImpulse.EI-SDK.1.61.36.pack">
       		EI-SDK
     	</release>
@@ -99,15 +102,12 @@
 		<release version="1.52.0" tag="v1.52.0" date="2024-06-12" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.52.0/EdgeImpulse.EI-SDK.1.52.0.pack">
       		EI-SDK
     	</release>
-		<release version="1.51.3" tag="v1.51.3" date="2024-06-11" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.51.3/EdgeImpulse.EI-SDK.1.51.3.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
 		<keyword>Edge Impulse SDK</keyword>
 	</keywords>
-    <conditions>    
+    <conditions>
 	<condition id="Cortex-M core">
 		<description>True if using one of the Cortex-M core</description>
 		<accept Dcore="Cortex-M0"/>
@@ -120,19 +120,13 @@
         <accept Dcore="Cortex-M55"/>
         <accept Dcore="Cortex-M85"/>
   	</condition>
-	<condition id="Compiler">
-		<description>True if Cortex-M core == TRUE and either GCC or ARMCC and device running in little-endian byte ordering</description>
-		<require condition="Cortex-M core"/>
-		<accept Tcompiler="GCC"/>
-		<accept Tcompiler="ARMCC"/>
-		<require Dendian="Little-endian"/>
-  	</condition>
 	<condition id="CMSIS packages">
 		<description>True if CMSIS Core and CMSIS DSP and CMSIS NN are in use</description>
+		<require condition="Cortex-M core"/>
 		<require Cclass="CMSIS" Cgroup="CORE"/>
         <require Cclass="CMSIS" Cgroup="DSP"/>
         <require Cclass="CMSIS" Cgroup="NN Lib"/>
-  	</condition>      
+  	</condition>
     </conditions>
     <requirements>
     <languages>
@@ -140,37 +134,20 @@
       <language name="C++" version="11"/>
     </languages>
 	<packages>
-      <package name="CMSIS" vendor="ARM" version="5.9.0:5.9.0"/>
-      <package name="CMSIS-DSP" vendor="ARM" version="1.11.0:1.11.0"/>
+      <package name="CMSIS" vendor="ARM" version="5.9.0:6.1.0"/>
+      <package name="CMSIS-DSP" vendor="ARM" version="1.11.0:1.15.0"/>
       <package name="CMSIS-NN" vendor="ARM" version="4.0.0:4.1.0"/>
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.61.37">
-			<description>Edge Impulse SDK</description>	
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.71.47">
+			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
                 <file category="include" name="edgeimpulse/"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/c/common.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/himax-we2/ethosu_driver.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ethosu_device_u55_u65.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ethosu_driver.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ethosu_pmu.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/pooling/esp_nn_avg_pool_ansi.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/pooling/esp_nn_max_pool_ansi.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/basic_math/esp_nn_mul_ansi.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/basic_math/esp_nn_add_ansi.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/fully_connected/esp_nn_fully_connected_ansi.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/activation_functions/esp_nn_relu_ansi.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/softmax/esp_nn_softmax_opt.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/softmax/esp_nn_softmax_ansi.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/convolution/esp_nn_conv_esp32p4.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/convolution/esp_nn_conv_opt.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/convolution/esp_nn_conv_ansi.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/convolution/esp_nn_depthwise_conv_ansi.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/convolution/esp_nn_depthwise_conv_opt.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/convolution/esp_nn_conv_esp32s3.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/convolution/esp_nn_depthwise_conv_s8_esp32s3.c"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/template/ei_classifier_porting.cpp" attr="template" select="porting layer template"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/template/debug_log.cpp" attr="template" select="porting layer template"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier_c.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_log.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_context.cpp"/>
@@ -331,49 +308,8 @@
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fftr.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/image/processing.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/dct/fast-dct-fft.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/himax-we2/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/himax-we2/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/posix/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/posix/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/iar/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/iar/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/renesas-ra/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/renesas-ra/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/clib/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/clib/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/seeed-vision-ai/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/seeed-vision-ai/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/raspberry/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/brickml/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/brickml/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/himax/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/himax/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/infineon-psoc62/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/infineon-psoc62/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/mbed/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/mbed/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/stm32-cubeai/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/stm32-cubeai/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/arduino/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/arduino/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/ambiq/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/ambiq/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/synaptics/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/synaptics/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/mingw32/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/mingw32/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/silabs/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/silabs/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/particle/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/particle/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/espressif/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/zephyr/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/zephyr/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/sony/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/sony/debug_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/ti/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/ti/debug_log.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/open-cmsis/ei_classifier_porting.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/open-cmsis/debug_log.cpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_aligned_malloc.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_dsp.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_nms.h"/>
@@ -399,6 +335,7 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_full.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/ethos_linux.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_helper.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/aton.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_micro.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tensaiflow.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/memryx.h"/>
@@ -432,6 +369,7 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_struct.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_stl_emulation.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer_ref.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/incbin/incbin.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_config.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_types.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_api.h"/>
@@ -637,29 +575,12 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kissfft.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fftr.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dct/fast-dct-fft.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_ceva_dsp_fixed.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_arm_cmsis_dsp.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_no_hw_dsp.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_ceva_dsp.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ei_classifier_porting.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ei_logging.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/include/ethosu_driver.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/include/ethosu_types.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/include/pmu_ethosu.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ethosu_log.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ethosu_device.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ethosu_interface.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ethosu55_interface.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ethosu_config_u55.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ethosu65_interface.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ethos-core-driver/src/ehtosu_config_u65.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/include/esp_nn_esp32s3.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/include/esp_nn_generic_opt.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/include/esp_nn_defs.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/include/esp_nn_ansi_headers.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/include/esp_nn.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/include/esp_nn_ansi_c.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/include/esp_nn_esp32p4.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/common/common_functions.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/espressif/ESP-NN/src/softmax/softmax_common.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/alignment/ei_alignment.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/alignment/rectangular_lsap.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/tinyEKF/tinyekf.hpp"/>
