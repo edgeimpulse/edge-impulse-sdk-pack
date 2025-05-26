@@ -5,11 +5,14 @@
 	<name>EI-SDK</name>
 	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.47/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.48/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
-		<release version="1.71.47" tag="v1.71.47" date="2025-05-22" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.47/EdgeImpulse.EI-SDK.1.71.47.pack">
+		<release version="1.71.48" tag="v1.71.48" date="2025-05-26" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.48/EdgeImpulse.EI-SDK.1.71.48.pack">
+      		EI-SDK
+    	</release>
+		<release version="1.71.47" tag="v1.71.47" date="2025-05-23" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.47/EdgeImpulse.EI-SDK.1.71.47.pack">
       		EI-SDK
     	</release>
 		<release version="1.61.37" tag="v1.61.37" date="2024-12-09" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.61.37/EdgeImpulse.EI-SDK.1.61.37.pack">
@@ -99,9 +102,6 @@
 		<release version="1.52.10" tag="v1.52.10" date="2024-06-24" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.52.10/EdgeImpulse.EI-SDK.1.52.10.pack">
       		EI-SDK
     	</release>
-		<release version="1.52.0" tag="v1.52.0" date="2024-06-12" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.52.0/EdgeImpulse.EI-SDK.1.52.0.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -140,469 +140,469 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.71.47">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.71.48">
 			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
                 <file category="include" name="edgeimpulse/"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/c/common.c"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/template/ei_classifier_porting.cpp" attr="template" select="porting layer template"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/template/debug_log.cpp" attr="template" select="porting layer template"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier_c.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_log.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_context.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_micro_allocator.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/test_helper_custom_ops.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/schema_utils.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/flatbuffer_utils.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/test_helpers.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/op_resolver_bridge.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_time.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_string.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/fake_micro_context.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/single_arena_buffer_allocator.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/mock_micro_graph.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_resource_variable.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/flatbuffer_conversions_bridge.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_single_arena_buffer_allocator.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_utils.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/all_ops_resolver.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_allocation_info.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_interpreter.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_allocator.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_helpers.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_graph.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/persistent_arena_buffer_allocator.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_profiler.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/non_persistent_arena_buffer_allocator.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/system_setup.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_error_reporter.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/squeeze.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pooling_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/conv_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/resize_bilinear.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/while.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/circular_buffer_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/dequantize.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/select.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/fully_connected_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/reshape.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/l2norm.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/reduce_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/elementwise.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/gather.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/tanh.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/micro_tensor_utils.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/split.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/cumsum.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/hard_swish.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/split_v.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/neg.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mul_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/elu.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/exp.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/depth_to_space.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/hard_swish_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/if.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/fill.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/slice.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/svdf_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/leaky_relu.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/floor_mod.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/ethosu.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/transpose.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/maximum_minimum.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pack.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/call_once.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/floor.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/prelu.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pooling.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/strided_slice.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/leaky_relu_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/fully_connected.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/complex_abs.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mul.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/gather_nd.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/broadcast_args.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/l2_pool_2d.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/depthwise_conv_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/read_variable.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/lstm_eval.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/add_n.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/softmax_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/depthwise_conv.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/arg_min_max.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/real.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/sub_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_interface.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/kernel_runner.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/transpose_conv.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/round.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/concatenation.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/unpack.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/batch_matmul.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/rfft2d.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/squared_difference.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/svdf.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/shape.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pad.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/floor_div.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/dequantize_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/detection_postprocess.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/softmax.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mirror_pad.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/expand_dims.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/div.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/zeros_like.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/unidirectional_sequence_lstm.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/conv.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/space_to_depth.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/comparisons.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/quantize_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/prelu_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/batch_to_space_nd.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logical_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/quantize.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/circular_buffer.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/tile.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logistic_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/cast.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/topk_v2.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/var_handle.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/activations_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/tree_ensemble_classifier.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/broadcast_to.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/add_common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scratch_buf_mgr.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logistic.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_slicers.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/kernel_util_micro.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/reduce.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/add.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/activations.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/space_to_batch_nd.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logical.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scatter_nd.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/log_softmax.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/assign_variable.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scratch_buffers.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/sub.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/ceil.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/non_persistent_buffer_planner_shim.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/memory.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/dct/fast-dct-fft.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/image/processing.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fft.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fftr.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/open-cmsis/debug_log.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/open-cmsis/ei_classifier_porting.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/error_reporter.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/flatbuffer_conversions.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/op_resolver.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/tensor_utils.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/kernel_util_lite.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/custom/tree_ensemble_classifier.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/portable_tensor_utils.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/quantization_util.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference_portable_tensor_utils.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/tensor_utils.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/custom/tree_ensemble_classifier.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/common.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/error_reporter.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/op_resolver.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/tensor_utils.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/flatbuffer_conversions.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/memory.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fft.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fftr.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/image/processing.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/dct/fast-dct-fft.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/open-cmsis/ei_classifier_porting.cpp"/>
-					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/open-cmsis/debug_log.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/test_helper_custom_ops.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/all_ops_resolver.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/fake_micro_context.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/flatbuffer_conversions_bridge.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/flatbuffer_utils.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_helpers.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_allocation_info.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_allocator.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_context.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_error_reporter.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_graph.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_interpreter.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_log.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_profiler.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_resource_variable.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_string.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_time.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_utils.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/mock_micro_graph.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/non_persistent_arena_buffer_allocator.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/op_resolver_bridge.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/persistent_arena_buffer_allocator.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_micro_allocator.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_single_arena_buffer_allocator.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/schema_utils.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/single_arena_buffer_allocator.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/system_setup.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/test_helpers.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/add_n.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/add.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/add_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/arg_min_max.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/assign_variable.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/batch_matmul.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/batch_to_space_nd.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/broadcast_args.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/broadcast_to.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/call_once.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/cast.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/ceil.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/circular_buffer.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/circular_buffer_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/comparisons.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/complex_abs.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/concatenation.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/conv.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/conv_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/cumsum.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/depthwise_conv.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/depthwise_conv_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/dequantize.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/dequantize_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/div.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/elementwise.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/elu.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/ethosu.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/exp.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/expand_dims.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/fill.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/floor.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/floor_div.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/floor_mod.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/fully_connected.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/fully_connected_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/gather.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/gather_nd.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/hard_swish.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/if.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/kernel_runner.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/kernel_util_micro.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/l2_pool_2d.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/l2norm.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/leaky_relu.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/log_softmax.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logical.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logical_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logistic.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logistic_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/tanh.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/lstm_eval.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/tile.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_interface.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mirror_pad.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_slicers.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mul.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mul_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/topk_v2.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/neg.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pack.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pad.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pooling.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/unpack.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/prelu.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/prelu_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/quantize.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/quantize_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/read_variable.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/real.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/reduce.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/reduce_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/reshape.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/resize_bilinear.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/rfft2d.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/round.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scatter_nd.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scratch_buf_mgr.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scratch_buffers.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/select.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/shape.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/slice.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/softmax.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/softmax_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/space_to_depth.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/split.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/split_v.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/squared_difference.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/squeeze.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/strided_slice.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/sub.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/sub_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/svdf.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/svdf_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/activations.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/activations_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/depth_to_space.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/detection_postprocess.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/hard_swish_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/leaky_relu_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/maximum_minimum.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/micro_tensor_utils.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pooling_common.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/space_to_batch_nd.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/transpose.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/transpose_conv.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/tree_ensemble_classifier.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/unidirectional_sequence_lstm.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/var_handle.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/while.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/zeros_like.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/non_persistent_buffer_planner_shim.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/template/debug_log.cpp" attr="template" select="porting layer template"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/template/ei_classifier_porting.cpp" attr="template" select="porting layer template"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_aligned_malloc.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_dsp.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_nms.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_constants.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier_c.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier_image.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_classifier_config.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_classifier_smooth.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_classifier_types.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_quantize.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_signal_with_range.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_constants.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_fill_result_struct.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_model_types.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_classifier_smooth.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_nms.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_quantize.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier_c.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier_image.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_dsp.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_signal_with_axes.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/anomaly.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/onnx_tidl.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_signal_with_range.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/akida.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/anomaly.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/aton.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/drpai.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/engines.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/ethos_linux.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/memryx.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/onnx_tidl.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tensaiflow.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tensorrt.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_tidl.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_eon.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_full.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/ethos_linux.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_helper.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/aton.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_micro.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tensaiflow.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/memryx.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/engines.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_performance_calibration.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing_common.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_tidl.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_object_counting.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_object_tracking.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_performance_calibration.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing_common.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/tinyEKF/tinyekf_custom.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/ruy/ruy/profiler/instrumentation.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/gemmlowp/internal/detect_platform.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/gemmlowp/fixedpoint/fixedpoint_neon.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/gemmlowp/fixedpoint/fixedpoint_sse.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/gemmlowp/fixedpoint/fixedpoint.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_table.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_array.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_vector.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_base.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_flatbuffer_builder.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_string.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_verifier.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_allocator.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_util.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/flatbuffers.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_detached_buffer.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_vector_downward.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_default_allocator.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/flexbuffers.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_struct.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_stl_emulation.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer_ref.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/incbin/incbin.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_config.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_types.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_api.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_krn_conv2d_spec_api.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_krn_avepool_spec_api.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_krn_maxpool_spec_api.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_mov_api.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_helpers_api.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_krn_depthwise_conv2d_spec_api.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_kernels_api.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_alloc.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_dsp_handle.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_flatten.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_profiler.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_vector.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/numpy_types.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/returntypes.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dct/fast-dct-fft.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_arm_cmsis_dsp.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_ceva_dsp.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_ceva_dsp_fixed.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_no_hw_dsp.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/_kiss_fft_guts.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fft.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fftr.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kissfft.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ei_classifier_porting.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ei_logging.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/builtin_op_data.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/builtin_ops.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/context_util.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/portable_type_to_tflitetype.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/builtin_ops.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/builtin_op_data.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_interpreter.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/compatibility.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_utils.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/fake_micro_context.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_allocation_info.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/mock_micro_graph.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_arena_constants.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_mutable_op_resolver.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/single_arena_buffer_allocator.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/test_helper_custom_ops.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/debug_log.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/flatbuffer_utils.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/flatbuffer_conversions_bridge.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/non_persistent_arena_buffer_allocator.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_micro_allocator.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_string.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/test_helpers.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/persistent_arena_buffer_allocator.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_graph.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_error_reporter.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_op_resolver.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/op_resolver_bridge.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_time.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_log.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/system_setup.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_profiler_interface.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_context.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_allocator.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_resource_variable.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_profiler.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_helpers.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_single_arena_buffer_allocator.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/all_ops_resolver.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/ibuffer_allocator.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_micro_interpreter.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/softmax.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/quantize.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/dequantize.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/ethosu.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/depthwise_conv.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/kernel_runner.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_tf_utils.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_interface.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scratch_buffers.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/tree_ensemble_classifier.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/circular_buffer.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/leaky_relu.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/circular_buffer_flexbuffers_generated_data.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logistic.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_slicers.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/kernel_util.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/fully_connected.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/svdf.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/prelu.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/sub.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pad.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/lstm_eval.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/add.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scratch_buf_mgr.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/activation_utils.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/hard_swish.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/lstm_shared.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_function_specializations.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mul.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/micro_tensor_utils.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/conv_test.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/detection_postprocess_flexbuffers_generated_data.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/reduce.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logical.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pooling.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/activations.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/conv.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/lstm_eval_test.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/micro_ops.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/greedy_memory_planner.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/non_persistent_buffer_planner_shim.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/micro_memory_planner.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/memory_plan_struct.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/linear_memory_planner.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/c/builtin_op_data.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/c/c_api_types.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/c/common.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/error_reporter.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/flatbuffer_conversions.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/op_resolver.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/tensor_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/c/builtin_op_data.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/c/c_api_types.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/c/common.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/kernel_util.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/op_macros.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/padding.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/compatibility.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference_portable_tensor_utils_impl.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/portable_tensor.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/min.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reduce_common.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/types.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/cppmath.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/quantization_util.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference_portable_tensor_utils.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/portable_tensor_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/custom/tree_ensemble_classifier.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/common.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/compatibility.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/cppmath.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/max.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/min.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/portable_tensor.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/portable_tensor_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/quantization_util.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reduce_common.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference_portable_tensor_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference_portable_tensor_utils_impl.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/runtime_shape.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/strided_slice_logic.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/tensor_ctypes.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/runtime_shape.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/types.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/optimized/neon_check.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/softmax.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/quantize.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/dequantize.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/strided_slice.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/floor_div.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/fill.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/requantize.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/leaky_relu.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/scatter_nd.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/floor_mod.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/logistic.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/fully_connected.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/broadcast_args.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/prelu.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/round.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/sub.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/add_n.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/slice.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/pad.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/add.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/l2normalization.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/log_softmax.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/add_n.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/arg_min_max.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/batch_matmul.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/batch_to_space_nd.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/binary_function.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/broadcast_args.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/broadcast_to.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/ceil.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/hard_swish.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/resize_nearest_neighbor.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/concatenation.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/depthwiseconv_uint8.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/tanh.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/lstm_cell.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/space_to_batch_nd.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/mul.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/elu.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/cumsum.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/reduce.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/depthwiseconv_float.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/process_broadcast_shapes.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/space_to_depth.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/batch_to_space_nd.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/maximum_minimum.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/exp.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/pooling.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/neg.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/comparisons.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/transpose_conv.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/resize_bilinear.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/batch_matmul.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/transpose.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/depth_to_space.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/concatenation.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/conv.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/floor.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/binary_function.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/cumsum.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/depth_to_space.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/depthwiseconv_float.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/depthwiseconv_uint8.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/dequantize.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/div.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/elu.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/exp.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/fill.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/floor.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/floor_div.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/floor_mod.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/fully_connected.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/hard_swish.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/l2normalization.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/leaky_relu.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/log_softmax.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/logistic.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/lstm_cell.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/maximum_minimum.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/mul.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/neg.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/pad.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/pooling.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/prelu.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/process_broadcast_shapes.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/quantize.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/reduce.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/requantize.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/resize_bilinear.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/resize_nearest_neighbor.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/round.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/scatter_nd.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/select.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/depthwise_conv.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/logistic.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/fully_connected.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/slice.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/softmax.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/space_to_batch_nd.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/space_to_depth.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/strided_slice.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/sub.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/tanh.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/transpose.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/transpose_conv.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/add.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/l2normalization.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/tanh.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/mul.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/mean.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/pooling.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/transpose_conv.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/conv.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/custom/tree_ensemble_classifier.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/tensor_utils.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/op_resolver.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/error_reporter.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/api/flatbuffer_conversions.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/c/c_api_types.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/c/builtin_op_data.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/core/c/common.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/schema/schema_utils.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/schema/schema_generated_full.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/depthwise_conv.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/fully_connected.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/l2normalization.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/logistic.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/mean.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/mul.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/pooling.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/tanh.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/reference/integer_ops/transpose_conv.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/all_ops_resolver.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/compatibility.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/debug_log.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/fake_micro_context.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/flatbuffer_conversions_bridge.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/flatbuffer_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/ibuffer_allocator.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_helpers.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_allocation_info.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_allocator.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_arena_constants.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_context.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_error_reporter.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_graph.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_interpreter.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_log.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_mutable_op_resolver.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_op_resolver.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_profiler.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_profiler_interface.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_resource_variable.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_string.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_time.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/micro_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/mock_micro_graph.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/non_persistent_arena_buffer_allocator.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/op_resolver_bridge.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/persistent_arena_buffer_allocator.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_micro_allocator.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_micro_interpreter.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/recording_single_arena_buffer_allocator.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/single_arena_buffer_allocator.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/system_setup.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/test_helper_custom_ops.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/test_helpers.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/activation_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/activations.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/add.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/circular_buffer.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/circular_buffer_flexbuffers_generated_data.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/conv.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/conv_test.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/depthwise_conv.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/dequantize.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/detection_postprocess_flexbuffers_generated_data.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/ethosu.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/fully_connected.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/hard_swish.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/kernel_runner.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/kernel_util.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/leaky_relu.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logical.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/logistic.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/lstm_eval.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/lstm_eval_test.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/lstm_shared.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/micro_ops.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/micro_tensor_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_function_specializations.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_interface.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_slicers.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mli_tf_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/mul.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pad.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/pooling.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/prelu.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/quantize.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/reduce.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scratch_buf_mgr.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/scratch_buffers.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/softmax.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/sub.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/svdf.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/kernels/tree_ensemble_classifier.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/greedy_memory_planner.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/linear_memory_planner.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/memory_plan_struct.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/micro_memory_planner.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/memory_planner/non_persistent_buffer_planner_shim.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/schema/schema_generated.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/c/c_api_types.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/c/builtin_op_data.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/c/common.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_flatten.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_dsp_handle.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/numpy_types.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_profiler.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_utils.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_alloc.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_vector.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/returntypes.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/_kiss_fft_guts.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fft.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kissfft.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fftr.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dct/fast-dct-fft.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_ceva_dsp_fixed.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_arm_cmsis_dsp.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_no_hw_dsp.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_ceva_dsp.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ei_classifier_porting.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/porting/ei_logging.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/schema/schema_generated_full.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/schema/schema_utils.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_api.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_config.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/mli_types.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_helpers_api.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_kernels_api.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_krn_avepool_spec_api.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_krn_conv2d_spec_api.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_krn_depthwise_conv2d_spec_api.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_krn_maxpool_spec_api.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/arc_mli_package/include/api/mli_mov_api.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_allocator.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_array.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_base.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer_ref.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_default_allocator.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_detached_buffer.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_flatbuffer_builder.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_stl_emulation.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_string.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_struct.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_table.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_util.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_vector.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_vector_downward.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_verifier.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/flatbuffers.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/flexbuffers.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/gemmlowp/fixedpoint/fixedpoint.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/gemmlowp/fixedpoint/fixedpoint_neon.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/gemmlowp/fixedpoint/fixedpoint_sse.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/gemmlowp/internal/detect_platform.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/incbin/incbin.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/third_party/ruy/ruy/profiler/instrumentation.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/alignment/ei_alignment.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/alignment/rectangular_lsap.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/tinyEKF/tinyekf.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/config.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/numpy.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/memory.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_hr.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/memory.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/numpy.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/returntypes.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/filters.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/image/image.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/image/processing.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/feature.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/wavelet.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/signal.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/spectral.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/filters.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/fir_filter.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/processing.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/signal.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/spectral.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/wavelet.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/wavelet_coeff.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/image/processing.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/image/image.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/speechpy/functions.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/speechpy/feature.hpp"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/speechpy/speechpy.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/speechpy/functions.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/speechpy/processing.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/speechpy/speechpy.hpp"/>
 				</files>
 		</component>
 	</components>
