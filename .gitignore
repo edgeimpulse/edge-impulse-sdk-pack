@@ -8,3 +8,7 @@ utensor/libutensor.a
 *.o
 *.d
 .DS_Store
+create-pdsc.py
+create-pidx.py
+requirements.txt
+
