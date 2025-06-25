@@ -5,10 +5,13 @@
 	<name>EI-SDK</name>
 	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.72.1/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.72.13/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
+		<release version="1.72.13" tag="v1.72.13" date="2025-06-25" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.72.13/EdgeImpulse.EI-SDK.1.72.13.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.72.1" tag="v1.72.1" date="2025-06-12" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.72.1/EdgeImpulse.EI-SDK.1.72.1.pack">
       		EI-SDK
     	</release>
@@ -99,9 +102,6 @@
 		<release version="1.57.1" tag="v1.57.1" date="2024-08-23" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.57.1/EdgeImpulse.EI-SDK.1.57.1.pack">
       		EI-SDK
     	</release>
-		<release version="1.56.9" tag="v1.56.9" date="2024-08-13" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.56.9/EdgeImpulse.EI-SDK.1.56.9.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -140,7 +140,7 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.72.1">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.72.13">
 			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
@@ -315,7 +315,6 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_classifier_smooth.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_classifier_types.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_constants.h"/>
-					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_fill_result_struct.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_model_types.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_nms.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_quantize.h"/>
