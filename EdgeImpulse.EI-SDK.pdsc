@@ -5,10 +5,13 @@
 	<name>EI-SDK</name>
 	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.74.5/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.74.8/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
+		<release version="1.74.8" tag="v1.74.8" date="2025-08-08" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.74.8/EdgeImpulse.EI-SDK.1.74.8.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.74.5" tag="v1.74.5" date="2025-07-30" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.74.5/EdgeImpulse.EI-SDK.1.74.5.pack">
       		EI-SDK
     	</release>
@@ -99,9 +102,6 @@
 		<release version="1.60.13" tag="v1.60.13" date="2024-10-29" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.60.13/EdgeImpulse.EI-SDK.1.60.13.pack">
       		EI-SDK
     	</release>
-		<release version="1.60.9" tag="v1.60.9" date="2024-10-24" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.60.9/EdgeImpulse.EI-SDK.1.60.9.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -140,7 +140,7 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.74.5">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.74.8">
 			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
@@ -359,6 +359,7 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_arm_cmsis_dsp.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_ceva_dsp.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_ceva_dsp_fixed.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_esp_dsp.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_no_hw_dsp.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/_kiss_fft_guts.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fft.h"/>
