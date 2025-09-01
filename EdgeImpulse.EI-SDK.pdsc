@@ -12,6 +12,12 @@
 		<release version="1.74.17" tag="v1.74.17" date="2025-08-22" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.74.17/EdgeImpulse.EI-SDK.1.74.17.pack">
       		EI-SDK
     	</release>
+		<release version="1.74.15" tag="v1.74.15" date="2025-08-20" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.74.15/EdgeImpulse.EI-SDK.1.74.15.pack">
+      		EI-SDK
+    	</release>
+		<release version="1.74.14" tag="v1.74.14" date="2025-08-19" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.74.14/EdgeImpulse.EI-SDK.1.74.14.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.74.8" tag="v1.74.8" date="2025-08-08" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.74.8/EdgeImpulse.EI-SDK.1.74.8.pack">
       		EI-SDK
     	</release>
