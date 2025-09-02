@@ -26,7 +26,7 @@ jobs:
       - name: Activate Arm tool license
         uses: ARM-software/cmsis-actions/armlm@v1
       - name: Install pack
-      working-directory: ./test-fw
+        working-directory: ./test-fw
         run: |
           cpackget add -a EdgeImpulse::EI-SDK@1.74.17
           cpackget add -a ./pack/EdgeImpulse.Tutorial_Continuous_motion_recog.211.0.0.pack
@@ -37,7 +37,7 @@ jobs:
           echo "Building get started example ..."
           cbuild inferencing.csolution --packs --update-rte --context .Speed+CM4-FP 
       - name: Execute
-      working-directory: ./test-fw
+        working-directory: ./test-fw
         run: |
           echo "Running get started example ..."
           FVP_MPS2_Cortex-M4 --simlimit 10 -f ./Target/CM4-FP/model_config.txt ./build/CM4-FP/GCC/Speed/inferencing/outdir/CM4-FP_inferencing.elf  | tee test_fw.log
