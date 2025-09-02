@@ -1,12 +1,14 @@
 name: Validate EI-SDK pack
-on:
-  workflow_run:
-    workflows: [Build pack]
-    types: [completed]
+on: [push]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
+    name: Validate pack
     runs-on: ubuntu-22.04
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v4
         with:
