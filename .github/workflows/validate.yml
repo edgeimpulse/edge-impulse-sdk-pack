@@ -1,0 +1,64 @@
+name: Validate EI-SDK pack
+
+on:
+  workflow_run:
+    workflows: ["Build pack"]
+    types:
+      - completed
+
+jobs:
+  validate-ei-sdk:
+    name: Validate EI-SDK pack
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'    
+
+      - name: Install system packages
+        run: |
+          sudo add-apt-repository ppa:deadsnakes/ppa
+          sudo apt-get install libpython3.9 libtinfo5
+
+      - name: Activate vcpkg
+        uses: ARM-software/cmsis-actions/vcpkg@v1
+
+      - name: Activate Arm tool license
+        uses: ARM-software/cmsis-actions/armlm@v1
+
+      - name: Build and download model
+        run: |
+          curl --request POST \
+            --url 'https://studio.edgeimpulse.com/v1/api/14299/jobs/build-ondevice-model?type=cmsis-package&impulseId=1' \
+            --header 'Content-Type: application/json' \
+            --header 'x-api-key: ei_26de8eccc6a4aded83c7a4d7d967d22c7cae2de81a537edbdf15bd814753e8dc' \
+            --data '{
+            "engine": "tflite-eon",
+            "modelType": "int8"
+          }'
+          curl --request GET \
+            --url 'https://studio.edgeimpulse.com/v1/api/14299/deployment/download?type=cmsis-package&modelType=int8&engine=tflite-eon&impulseId=1' \
+            --header 'x-api-key: ei_26de8eccc6a4aded83c7a4d7d967d22c7cae2de81a537edbdf15bd814753e8dc' \
+            --output "./cmsis-package.zip"
+          unzip "./cmsis-package.zip"
+          echo "Register local Edge Impulse pack"
+          cpackget add -a *.pack
+          cp edgeimpulse.clayer.yml ./test-fw/model
+
+      - name: Build
+        working-directory: ./test-fw
+        run: |
+          echo "Building get started example ..."
+          cbuild inferencing.csolution --packs --update-rte --context .Speed+CM4-FP 
+
+      - name: Execute
+      working-directory: ./test-fw
+        run: |
+          echo "Running get started example ..."
+          FVP_MPS2_Cortex-M4 --simlimit 10 -f ./Target/CM4-FP/model_config.txt ./build/CM4-FP/GCC/Speed/inferencing/outdir/CM4-FP_inferencing.elf  | tee test_fw.log
+          echo "Checking output..."
+          test "$(grep "FAIL: " test_fw.log | wc -l)" -eq 0

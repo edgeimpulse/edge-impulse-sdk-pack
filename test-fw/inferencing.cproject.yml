@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/tools/projmgr/2.10.0/tools/projmgr/schemas/cproject.schema.json
+project:
+
+# List the packs that define the device and/or board
+  packs:
+    - pack: ARM::CMSIS@6.0.0
+    - pack: ARM::CMSIS-DSP@1.15.0
+    - pack: ARM::CMSIS-NN@4.0.0
+    - pack: Keil::V2M-MPS2_CMx_BSP@1.8.2
+    - pack: ARM::Cortex_DFP@1.1.0
+
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Device:Startup&C Startup
+    - component: ARM::CMSIS:DSP
+    - component: ARM::CMSIS:NN Lib
+
+  layers:
+    - layer: ./App/App.clayer.yml
+    - layer: ./model/edgeimpulse.clayer.yml
+
+    #Target: CM4-FP
+    - layer: ./Target/CM4-FP/Target.clayer.yml
+      for-context:
+        - +CM4-FP
+
+  output:
+    base-name: $TargetType$_$Project$ # used the base name of the `cproject.yml` file.
+    type: elf # Generate executeable file.

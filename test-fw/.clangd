@@ -1,0 +1,4 @@
+CompileFlags:
+  CompilationDatabase: >-
+    /Users/francescovarani/work/temp/edge-impulse-sdk-pack/test-fw/out/inferencing/CM4-FP/Speed
+  Add: []

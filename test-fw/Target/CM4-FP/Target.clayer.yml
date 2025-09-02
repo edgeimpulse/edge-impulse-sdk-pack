@@ -1,0 +1,18 @@
+layer:
+  type: Target
+  description: CM4 target components and files
+
+  groups:
+    - group: FVP
+      files:
+        - file: ./model_config.txt
+
+  linker:
+    - for-compiler: AC6
+      regions: $SolutionDir()$/RTE/Device/$Dname$/regions_$Dname$.h
+    - for-compiler: GCC
+      regions: $SolutionDir()$/RTE/Device/$Dname$/regions_$Dname$.h
+    - for-compiler: CLANG
+      regions: $SolutionDir()$/RTE/Device/$Dname$/regions_$Dname$.h
+    - for-compiler: IAR
+      regions: $SolutionDir()$/RTE/Device/$Dname$/regions_$Dname$.h

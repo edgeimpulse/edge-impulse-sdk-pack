@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/tools/projmgr/2.10.0/tools/projmgr/schemas/clayer.schema.json
+layer:
+  type: Application
+  description: Example standalone inferencing project for CMSIS Toolbox using Edge Impulse SDK
+
+  groups:
+    - group: Application
+      files:
+        - file: ./src/main.cpp
+        - file: ./src/ei_classifier_porting.cpp
+        - file: ./src/systick_handler.cpp

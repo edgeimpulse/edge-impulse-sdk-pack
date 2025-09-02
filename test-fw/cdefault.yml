@@ -1,0 +1,46 @@
+default:
+  misc:
+    - for-compiler: GCC
+      C:
+        - -std=c99
+        - -flax-vector-conversions
+        - -mthumb
+        - -fdata-sections
+      CPP:
+        - -std=c++11
+        - -Og
+        - -fdata-sections
+        - -mthumb
+        - -fno-rtti
+        - -fno-unwind-tables
+      Link:
+        #- --specs=nosys.specs
+        - --specs=nano.specs
+        - --specs=rdimon.specs
+        - --entry=Reset_Handler
+        - -Wl,--no-warn-rwx-segments   # suppress incorrect linker warning
+        - -Wl,-Map=.map,--cref,-print-memory-usage,--gc-sections
+    - for-compiler: CLANG
+      C:
+        - -std=c99
+        - -flax-vector-conversions
+        - -mthumb
+        - -fdata-sections
+      CPP:
+        - -std=c++11
+        - -Og
+        - -fdata-sections
+        - -mthumb
+        - -fno-rtti
+        - -fno-unwind-tables
+        - -fno-exceptions
+      Link:
+        - -Wl, -lcrt0
+    - for-compiler: AC6
+      C:
+        - -std=c99
+      CPP:
+        - -std=c++11
+        - -fno-rtti
+      Link:
+        - --entry=Reset_Handler
