@@ -1,0 +1,11 @@
+layer:
+  type: Edge Impulse layer
+  description: Edge Impulse SDK and model
+
+  packs:
+    - pack: EdgeImpulse::EI-SDK@1.74.17
+    - pack: EdgeImpulse::Tutorial_Continuous_motion_recog@211.0.0
+
+  components:
+    - component: EdgeImpulse::EdgeImpulse:SDK@1.74.17
+    - component: EdgeImpulse:model:Tutorial_Continuous_motion_recog@211.0.0
