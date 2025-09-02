@@ -7,12 +7,13 @@ on:
       - completed
 
 jobs:
-  validate-ei-sdk:
-    name: Validate EI-SDK pack
+  validate_ei_sdk: 
     runs-on: ubuntu-22.04
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python 3.10
         uses: actions/setup-python@v5
