@@ -38,7 +38,6 @@ jobs:
 
       - name: Build and download model
         run: |
-          cpackget add -a EdgeImpulse::EI-SDK@1.74.17
           curl --request POST \
             --url 'https://studio.edgeimpulse.com/v1/api/14299/jobs/build-ondevice-model?type=cmsis-package&impulseId=1' \
             --header 'Content-Type: application/json' \
