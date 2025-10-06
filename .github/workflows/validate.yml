@@ -1,9 +1,5 @@
 name: Validate EI-SDK pack
-on:
-  workflow_run:
-    workflows: ["Build pack"]
-    types:
-      - completed
+on: [push]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
