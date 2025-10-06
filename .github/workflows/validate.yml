@@ -34,7 +34,6 @@ jobs:
 
       - name: Check out EI actions
         uses: actions/checkout@v5
-        id: model-deployment
         with:
           repository: edgeimpulse/build-deploy
           ref: add-impulse-support
@@ -42,6 +41,7 @@ jobs:
 
       - name: Build and deploy Edge Impulse Model
         uses: ./.github/actions/build-deploy-update
+        id: model-deployment
         with:
           project_id: 14299
           api_key: ei_26de8eccc6a4aded83c7a4d7d967d22c7cae2de81a537edbdf15bd814753e8dc
