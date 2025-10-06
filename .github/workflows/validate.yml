@@ -45,15 +45,16 @@ jobs:
           project_id: 14299
           api_key: ei_26de8eccc6a4aded83c7a4d7d967d22c7cae2de81a537edbdf15bd814753e8dc
           deployment_type: cmsis-package
+          modelType: 'int8'
 
       - name: Extract the Model and SDK
         run: |
           mkdir temp
-          unzip -q "${{ steps.build-deploy.outputs.deployment_file_name }}" -d temp
+          unzip -q "${{ steps.build-deploy-update.outputs.deployment_file_name }}" -d temp
           echo "Register local Edge Impulse pack"
           cpackget add -a temp/*.pack
           mv temp/edgeimpulse.clayer.yml ./test-fw/model
-          rm -rf "${{ steps.build-deploy.outputs.deployment_file_name }}"
+          rm -rf "${{ steps.build-deploy-update.outputs.deployment_file_name }}"
           rm -rf temp/
 
       - name: Build
