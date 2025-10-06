@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           repository: edgeimpulse/build-deploy
-          ref: a1fda593654f6ed426bcb25a77cdd71edc291958
+          ref: add-impulse-support
           path: ./.github/actions/build-deploy-update
 
       - name: Build and deploy Edge Impulse Model
