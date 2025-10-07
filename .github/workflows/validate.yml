@@ -43,10 +43,11 @@ jobs:
         uses: ./.github/actions/build-deploy-update
         id: model-deployment
         with:
-          project_id: 14299
-          api_key: ei_26de8eccc6a4aded83c7a4d7d967d22c7cae2de81a537edbdf15bd814753e8dc
+          project_id: 14225
+          api_key:  ei_3e6a64e5158f4e671f6eb4e1d677a2743507ecf898724983050c9481ea1e1f57
           deployment_type: cmsis-package
           model_type: int8
+          impulse_id: 2
 
       - name: Extract the Model and SDK
         run: |
