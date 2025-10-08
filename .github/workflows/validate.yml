@@ -47,7 +47,6 @@ jobs:
           api_key:  ei_3e6a64e5158f4e671f6eb4e1d677a2743507ecf898724983050c9481ea1e1f57
           deployment_type: cmsis-package
           model_type: int8
-          impulse_id: 2
 
       - name: Extract the Model and SDK
         run: |
