@@ -32,19 +32,12 @@ jobs:
       - name: Activate Arm tool license
         uses: ARM-software/cmsis-actions/armlm@v1
 
-      - name: Check out EI actions
-        uses: actions/checkout@v5
-        with:
-          repository: edgeimpulse/build-deploy
-          ref: add-impulse-support
-          path: ./.github/actions/build-deploy-update
-
       - name: Build and deploy Edge Impulse Model
-        uses: ./.github/actions/build-deploy-update
+        uses: edgeimpulse/build-deploy@v2
         id: model-deployment
         with:
-          project_id: 14225
-          api_key:  ei_3e6a64e5158f4e671f6eb4e1d677a2743507ecf898724983050c9481ea1e1f57
+          project_id: 14299
+          api_key:  ei_26de8eccc6a4aded83c7a4d7d967d22c7cae2de81a537edbdf15bd814753e8dc
           deployment_type: cmsis-package
           model_type: int8
 
