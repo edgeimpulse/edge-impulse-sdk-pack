@@ -5,10 +5,13 @@
 	<name>EI-SDK</name>
 	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.75.2/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.76.1/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
+		<release version="1.76.1" tag="v1.76.1" date="2025-10-20" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.76.1/EdgeImpulse.EI-SDK.1.76.1.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.75.2" tag="v1.75.2" date="2025-10-07" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.75.2/EdgeImpulse.EI-SDK.1.75.2.pack">
       		EI-SDK
     	</release>
@@ -99,9 +102,6 @@
 		<release version="1.61.37" tag="v1.61.37" date="2024-12-09" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.61.37/EdgeImpulse.EI-SDK.1.61.37.pack">
       		EI-SDK
     	</release>
-		<release version="1.61.36" tag="v1.61.36" date="2024-12-08" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.61.36/EdgeImpulse.EI-SDK.1.61.36.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -140,7 +140,7 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.75.2">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.76.1">
 			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
@@ -587,6 +587,7 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/alignment/rectangular_lsap.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/tinyEKF/tinyekf.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/config.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_eeg.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_hr.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/memory.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/numpy.hpp"/>
