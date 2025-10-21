@@ -64,3 +64,4 @@ jobs:
           FVP_MPS2_Cortex-M4 --simlimit 10 -f ./Target/CM4-FP/model_config.txt ./build/CM4-FP/GCC/Speed/inferencing/outdir/CM4-FP_inferencing.elf  | tee test_fw.log
           echo "Checking output..."
           test "$(grep "FAIL: " test_fw.log | wc -l)" -eq 0
+          echo "Checking output...DONE"
