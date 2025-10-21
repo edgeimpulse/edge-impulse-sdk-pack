@@ -33,7 +33,7 @@ jobs:
         uses: ARM-software/cmsis-actions/armlm@v1
 
       - name: Build and deploy Edge Impulse Model
-        uses: edgeimpulse/build-deploy@v2
+        uses: edgeimpulse/build-deploy@v2.0.0
         id: model-deployment
         with:
           project_id: 14299
