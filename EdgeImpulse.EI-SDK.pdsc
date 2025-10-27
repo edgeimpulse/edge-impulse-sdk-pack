@@ -5,10 +5,13 @@
 	<name>EI-SDK</name>
 	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.76.4/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.77.0/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
+		<release version="1.77.0" tag="v1.77.0" date="2025-10-27" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.77.0/EdgeImpulse.EI-SDK.1.77.0.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.76.4" tag="v1.76.4" date="2025-10-22" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.76.4/EdgeImpulse.EI-SDK.1.76.4.pack">
       		EI-SDK
     	</release>
@@ -99,9 +102,6 @@
 		<release version="1.71.48" tag="v1.71.48" date="2025-05-26" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.48/EdgeImpulse.EI-SDK.1.71.48.pack">
       		EI-SDK
     	</release>
-		<release version="1.71.47" tag="v1.71.47" date="2025-05-23" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.47/EdgeImpulse.EI-SDK.1.71.47.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -140,7 +140,7 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.76.4">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.77.0">
 			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
@@ -318,6 +318,7 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_data_normalization.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_model_types.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_nms.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_print_results.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_quantize.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/ei_run_classifier_c.h"/>
@@ -333,6 +334,7 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/engines.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/ethos_linux.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/memryx.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/nordic_axon.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/onnx_tidl.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tensaiflow.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tensorrt.h"/>
