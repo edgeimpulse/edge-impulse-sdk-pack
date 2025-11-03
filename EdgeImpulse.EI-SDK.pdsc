@@ -5,10 +5,13 @@
 	<name>EI-SDK</name>
 	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.77.1/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.78.0/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
+		<release version="1.78.0" tag="v1.78.0" date="2025-11-03" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.78.0/EdgeImpulse.EI-SDK.1.78.0.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.77.1" tag="v1.77.1" date="2025-10-30" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.77.1/EdgeImpulse.EI-SDK.1.77.1.pack">
       		EI-SDK
     	</release>
@@ -99,9 +102,6 @@
 		<release version="1.71.50" tag="v1.71.50" date="2025-05-26" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.50/EdgeImpulse.EI-SDK.1.71.50.pack">
       		EI-SDK
     	</release>
-		<release version="1.71.49" tag="v1.71.49" date="2025-05-26" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.49/EdgeImpulse.EI-SDK.1.71.49.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -140,7 +140,7 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.77.1">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.78.0">
 			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
@@ -347,7 +347,9 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_object_tracking.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_performance_calibration.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing_ai_hub.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing_common.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing_types.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/tinyEKF/tinyekf_custom.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_alloc.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_dsp_handle.h"/>
