@@ -5,10 +5,13 @@
 	<name>EI-SDK</name>
 	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.81.3/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.81.4/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
+		<release version="1.81.4" tag="v1.81.4" date="2025-12-18" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.81.4/EdgeImpulse.EI-SDK.1.81.4.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.81.3" tag="v1.81.3" date="2025-12-16" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.81.3/EdgeImpulse.EI-SDK.1.81.3.pack">
       		EI-SDK
     	</release>
@@ -99,9 +102,6 @@
 		<release version="1.71.56" tag="v1.71.56" date="2025-05-30" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.56/EdgeImpulse.EI-SDK.1.71.56.pack">
       		EI-SDK
     	</release>
-		<release version="1.71.55" tag="v1.71.55" date="2025-05-30" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.55/EdgeImpulse.EI-SDK.1.71.55.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -140,7 +140,7 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.81.3">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.81.4">
 			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
@@ -596,6 +596,7 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/memory.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/numpy.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/returntypes.hpp"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/dsp_engines/ei_cmsis_numpy.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/image/image.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/image/processing.hpp"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/spectral/feature.hpp"/>
