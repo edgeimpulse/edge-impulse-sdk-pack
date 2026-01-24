@@ -5,10 +5,13 @@
 	<name>EI-SDK</name>
 	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.82.13/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.82.19/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
+		<release version="1.82.19" tag="v1.82.19" date="2026-01-24" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.82.19/EdgeImpulse.EI-SDK.1.82.19.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.82.13" tag="v1.82.13" date="2026-01-13" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.82.13/EdgeImpulse.EI-SDK.1.82.13.pack">
       		EI-SDK
     	</release>
@@ -99,9 +102,6 @@
 		<release version="1.72.1" tag="v1.72.1" date="2025-06-12" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.72.1/EdgeImpulse.EI-SDK.1.72.1.pack">
       		EI-SDK
     	</release>
-		<release version="1.71.60" tag="v1.71.60" date="2025-06-06" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.71.60/EdgeImpulse.EI-SDK.1.71.60.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -140,7 +140,7 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.82.13">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.82.19">
 			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
@@ -343,12 +343,14 @@
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_helper.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_micro.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/tflite_tidl.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/inferencing_engines/vlm_connector.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_object_counting.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_object_tracking.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_performance_calibration.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing_ai_hub.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing_common.h"/>
+					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing_thresholds.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/ei_postprocessing_types.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/classifier/postprocessing/tinyEKF/tinyekf_custom.h"/>
 					<file category="header" name="edgeimpulse/edge-impulse-sdk/dsp/ei_alloc.h"/>
