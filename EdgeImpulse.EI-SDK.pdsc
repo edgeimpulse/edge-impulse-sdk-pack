@@ -5,10 +5,13 @@
 	<name>EI-SDK</name>
 	<license>LICENSE.3-clause-bsd-clear</license>
 	<description>Edge Impulse SDK</description>
-	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.96.0/</url>
+	<url>https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.96.1/</url>
 	<supportContact>hello@edgeimpulse.com</supportContact>
 	<repository type="git">https://github.com/edgeimpulse/edge-impulse-sdk-pack.git</repository>
 	<releases>
+		<release version="1.96.1" tag="v1.96.1" date="2026-10-21" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.96.1/EdgeImpulse.EI-SDK.1.96.1.pack">
+      		EI-SDK
+    	</release>
 		<release version="1.96.0" tag="v1.96.0" date="2026-10-19" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.96.0/EdgeImpulse.EI-SDK.1.96.0.pack">
       		EI-SDK
     	</release>
@@ -99,9 +102,6 @@
 		<release version="1.94.5" tag="v1.94.5" date="2026-08-07" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.94.5/EdgeImpulse.EI-SDK.1.94.5.pack">
       		EI-SDK
     	</release>
-		<release version="1.94.4" tag="v1.94.4" date="2026-08-05" url="https://github.com/edgeimpulse/edge-impulse-sdk-pack/releases/download/v1.94.4/EdgeImpulse.EI-SDK.1.94.4.pack">
-      		EI-SDK
-    	</release>
 	</releases>
 	<keywords>
 		<keyword>EdgeImpulse</keyword>
@@ -140,7 +140,7 @@
     </packages>
     </requirements>
 	<components>
-		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.96.0">
+		<component Cclass="EdgeImpulse" Cgroup="SDK" Cversion="1.96.1">
 			<description>Edge Impulse SDK</description>
 				<!-- short component description -->
 				<files>
@@ -154,6 +154,8 @@
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/image/processing.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fft.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/dsp/kissfft/kiss_fftr.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/alif/debug_log.cpp"/>
+					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/alif/ei_classifier_porting.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/open-cmsis/debug_log.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/porting/open-cmsis/ei_classifier_porting.cpp"/>
 					<file category="source" name="edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/kernel_util_lite.cpp"/>
